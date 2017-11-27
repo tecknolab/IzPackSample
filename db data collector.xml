@@ -1,0 +1,43 @@
+<installation version="5.0"
+       xmlns:izpack="http://izpack.org/schema/installation">
+
+    <info>
+        <appname>DBcloudbin RoI data collector tool</appname>
+        <appversion>beta-1</appversion>
+        <authors>
+            <author name="Tecknolab" email="info@tecknolab.com" />
+        </authors>
+        <url>http://www.tecknolab.com/dbcloudbin</url>
+        <javaversion>1.8</javaversion>
+        <requiresjdk>no</requiresjdk>
+        <readinstallationinformation> No</readinstallationinformation>
+        <writeinstallationinformation> No</writeinstallationinformation>
+    </info>
+
+    <guiprefs width="640" height="480" resizable="yes" />
+
+    <locale>
+        <langpack iso3="eng" />
+    </locale>
+
+	<resources>
+   		<res id="userInputSpec.xml" src="./userInputSpec.xml"/>
+   		<res id="userInputLang.xml" src="./i18n/userInputLang.xml"/>
+   		<res id="userInputLang.xml_eng" src="./i18n/userInputLang.xml_eng"/>
+	</resources>
+
+    <panels>
+        <panel classname="HelloPanel" id="HelloPanel"/>
+		<panel classname="UserInputPanel" id="panel.mssql"/>
+        <panel classname="FinishPanel" />
+    </panels>
+
+	<packs>
+	    <pack name="Test Core" required="yes">
+      		<description>The core files needed for the application</description>
+      		<fileset dir="plain" targetdir="${INSTALL_PATH}" override="true"/>
+      		<parsable targetfile="${INSTALL_PATH}/test.properties"/>
+    	</pack>
+	</packs>
+
+</installation>

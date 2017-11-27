@@ -1,0 +1,31 @@
+<userInput>
+	<panel id="panel.mssql">
+   			<field id="panel.mssql.title" txt="Microsoft SQL Server Connection" type="title"/>
+   			<field type="text" variable="mssql.host">
+      			<spec id="panel.mssql.host" size="30" txt="DB host name:"/>
+      			<validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="panel.mssql.host.error" txt="The host name must not be empty!"/>
+   			</field>
+   			<field type="space"/>
+   			<field type="rule" variable="mssql.port">
+      			<spec id="panel.mssql.port" layout="N:5:5" txt="Port:"/>
+      			<validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="panel.mssql.port.error" txt="The port must not be empty!"/>
+      			<validator class="com.izforge.izpack.panels.userinput.validator.IsPortValidator" id="panel.mssql.port.error.invalid" txt="The port is invalid!"/>
+   			</field>
+   			<field type="space"/>
+   			<field type="divider"/>
+   			<field type="space"/>
+   			<field type="text" variable="mssql.user">
+      			<spec id="panel.mssql.user" size="20" txt="User name:"/>
+      			<validator class="com.izforge.izpack.panels.userinput.validator.RegularExpressionValidator" id="panel.mssql.user.error" txt="The user name is invalid!">
+         			<param name="pattern" value="[a-zA-Z0-9._-]+"/>
+      			</validator>
+   			</field>
+   			<field type="space"/>
+   			<field type="password" variable="mssql.password">
+      			<spec>
+         			<pwd id="panel.mssql.password" size="20" txt="Password:"/>
+      			</spec>
+      			<validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="panel.mssql.password.error" txt="The password must not be empty!"/>
+   			</field>
+	</panel>       
+</userInput>	

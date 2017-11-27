@@ -1,0 +1,8 @@
+<izpack:langpack version="5.0" xmlns:izpack="http://izpack.org/schema/langpack" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://izpack.org/schema/langpack http://izpack.org/schema/5.0/izpack-langpack-5.0.xsd">
+    <str id="panel.mssql.title" txt="Microsoft SQL Server Connection"/>
+    <str id="panel.mssql.host" txt="DB host name:"/>
+    <str id="panel.mssql.port" txt="Port:"/>
+    <str id="panel.mssql.user" txt="User name:"/>
+    <str id="panel.mssql.password" txt="Password:"/>
+</izpack:langpack>
+	
